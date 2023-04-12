@@ -6,9 +6,9 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["custom/launch_wofi","wlr/workspaces","cpu","memory","disk","hyprland/window"],
+    "modules-left": ["custom/launch_wofi","wlr/workspaces","cpu","memory","disk","temperature","hyprland/window"],
     "modules-center": ["custom/lock_screen","custom/updates","clock","custom/power_btn"],
-    "modules-right": ["temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray","custom/weather","custom/light_dark"],
+    "modules-right": ["battery","backlight","pulseaudio","pulseaudio#microphone","tray","clock","custom/light_dark"],
     
     "hyprland/window": {
         "format": "{}"
@@ -171,9 +171,9 @@
     },
     
     "temperature": {
-        "thermal-zone": 1,
-        "format": " {temperatureF}°F",
-        "critical-threshold": 70,
+        //"thermal-zone": 1,
+        "format": " {temperatureF}°C",
+        "critical-threshold": 80,
         "format-critical": " {temperatureC}°C",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     }
